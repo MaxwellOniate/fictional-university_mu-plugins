@@ -31,7 +31,7 @@ function university_post_types()
     ]
   ]);
   register_post_type('program', [
-    'supports' => ['title', 'editor'],
+    'supports' => ['title'],
     'rewrite' => ['slug' => 'programs'],
     'has_archive' => true,
     'public' => true,
@@ -45,6 +45,7 @@ function university_post_types()
     ]
   ]);
   register_post_type('professor', [
+    'show_in_rest' => true,
     'supports' => ['title', 'editor', 'thumbnail'],
     'public' => true,
     'menu_icon' => 'dashicons-welcome-learn-more',
