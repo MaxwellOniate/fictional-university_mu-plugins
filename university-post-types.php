@@ -62,6 +62,8 @@ function university_post_types()
     ]
   ]);
   register_post_type('note', [
+    'capability_type' => 'note',
+    'map_meta_cap' => true,
     'show_in_rest' => true,
     'supports' => ['title', 'editor', 'thumbnail'],
     'public' => false,
